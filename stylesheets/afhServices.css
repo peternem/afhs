@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #cccccc;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+h1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	padding: 0px;
+	color:#FFFFFF;
+}
+h2 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	padding: 0px;
+	color:#FFFFFF;
+}
+.twoColFixLtHdr #container {
+	width: 850px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #cccccc;
+	margin: 5px auto; /* the auto margins (in conjunction with a width) center the page */
+	padding:0px;
+	/*border: 1px solid #000000;*/
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.twoColFixLtHdr #header {
+	/*background: #9c947c;*/
+	margin: 0px 0px 5px 0px;
+	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+}
+
+.twoColFixLtHdr .LogoImage {
+	border:0px;
+
+}
+.twoColFixLtHdr #header2 {
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+	height:190px;
+}
+
+.twoColFixLtHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.twoColFixLtHdr #sidebar1 {
+	float: left; /* since this element is floated, a width must be given */
+	width: 150px; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	height: 330px;
+	/*background: #000;*/ /* the background color will be displayed for the length of the content in the column, but no further */
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.twoColFixLtHdr #sidebar1 h3 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding: 0px;
+	font-style:italic;
+	text-align:center;
+	color:#FFFFFF;
+	margin:70px 0px 0px 0px;
+}
+.twoColFixLtHdr #sidebar1 p {
+	color:#FFFFFF;
+	text-align:center;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding:0px 3px 0px 3px;
+	word-spacing:1PX;
+	margin-top:6px;
+	font-style:italic;
+}
+.twoColFixLtHdr #sidebar1 ul {
+	color:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin:20px 0px 0px 0px;
+	padding:0px;
+	/*border:#000000 1px solid;*/
+	list-style:none;
+	text-align:left;
+}
+
+.twoColFixLtHdr #sidebar1 li {
+	margin:5px 0px 5px 10px;
+	list-style: none;
+}
+
+.twoColFixLtHdr #sidebar1 a {
+	color:#ffffff;
+	text-decoration:none;	
+}
+
+.twoColFixLtHdr #sidebar1 a:hover {
+	color:#666666;
+	text-decoration:none;	
+
+}
+
+.twoColFixLtHdr #mainContent {
+	margin: 0px 0px 0px 0px; /* the left margin on this div element creates the column down the left side of the page - no matter how much content the sidebar1 div contains, the column space will remain. You can remove this margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends. */
+	padding: 0px 10px 20px 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	height:330px;
+	display: none;
+	/*border:#000000 1px solid;*/
+}
+
+.twoColFixLtHdr #mainContent p {
+	text-align:justify;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding:0px;
+	margin:10px 10px 0px 0px;
+	line-height:1.35em;
+}
+
+.twoColFixLtHdr #mainContent h1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	padding: 0px;
+	color:#FFFFFF;
+	font-weight:normal;
+	margin:0px;
+	padding:10px 0px 0px 0px;
+}
+.twoColFixLtHdr #mainContent h2 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	padding: 0px;
+	color:#FFFFFF;
+	font-weight:normal;
+}
+.twoColFixLtHdr #mainContent .MainContentImg {
+	float: RIGHT;
+	clear: RIGHT;
+	padding: 10px 5px 0px 10px;
+}
+.twoColFixLtHdr #footer {
+	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. *//*background: #9c947c;*/
+}
+.twoColFixLtHdr #footer .footer-content {
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding:5px 0px 5px 0px;
+	text-align:center;
+}
+.twoColFixLtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+/* HEADER ROUNDED CORNER CSS STYLES */
+.LOGOHDR-tl {
+	background: url(../images/round-grey_01.gif) 0 0 no-repeat;
+}
+.LOGOHDR-tr {
+	background: url(../images/round-grey_03.gif) 100% 0 no-repeat;
+}
+.LOGOHDR-bl {
+	background: url(../images/round-grey_06.gif) 0 100% no-repeat #9c947c;
+	width:850px;
+}
+.LOGOHDR-br {
+	background: url(../images/round-grey_07.gif) 100% 100% no-repeat;
+	width: 100%;
+
+}
+/* Sidebar1 ROUNDED CORNER CSS STYLES */
+
+
+.navmenu-tl {
+	background: url(../images/round-corner-green_01.jpg) 0 0 no-repeat;
+	float: left;
+	margin:0px;
+}
+
+.navmenu-tr {
+	background: url(../images/round-corner-green_03.jpg) 100% 0 no-repeat;
+	float: left;
+}
+
+.navmenu-bl {
+	background: url(../images/round-corner-green_06.jpg) 0 100% no-repeat #669933;
+	margin-top:5px;
+	width:150px;
+	float: left;
+}
+
+.navmenu-br {
+	background: url(../images/round-corner-green_07.jpg) 100% 100% no-repeat;
+	height:330PX;
+	float: left;
+}
+
+/* MainContent  ROUNDED CORNER CSS STYLES */
+.tl {
+	background: url(../images/round-grey_01.gif) 0 0 no-repeat;
+	float: left;
+
+}
+.tr {
+	background: url(../images/round-grey_03.gif) 100% 0 no-repeat;
+	float: left;	
+}
+
+.bl {
+	background: url(../images/round-grey_06.gif) 0 100% no-repeat #9c947c;
+	margin-top:5px;
+	width:695px;
+	height:330PX;
+	float: left;
+	margin-left:5px;
+}
+.br {
+	background: url(../images/round-grey_07.gif) 100% 100% no-repeat;
+	height:330PX;
+	float: left;
+}
+/* Footer  ROUNDED CORNER CSS STYLES */
+.footer-tl {
+	background: url(../images/round-grey_01.gif) 0 0 no-repeat;
+}
+.footer-tr {
+	background: url(../images/round-grey_03.gif) 100% 0 no-repeat;
+}
+.footer-bl {
+	background: url(../images/round-grey_06.gif) 0 100% no-repeat #9c947c;
+	width:850px;
+	margin-top:5px;
+}
+.footer-br {
+	background: url(../images/round-grey_07.gif) 100% 100% no-repeat;
+}
+
+/* Navigation Menu Bullet Icon CSS Style*/
+.bullet {
+	padding:4px 10px 4px 0px;
+}
